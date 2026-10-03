@@ -1,44 +1,51 @@
-const themes=[  {
-     name:"MIDNIGHT ECHOES",
-     image:"../images/midnightechoessand.gif",
-     id:"midnightechoes" 
-},
-  {
-     name:"SKY LETTERS",
-     image:"../images/skyletterssand.gif",
-     id:"skyletters" 
-},
-  {
-     name:"STRAWBERRY MEMORIES",
-     image:"../images/strawberrymemoriessand.gif",
-     id:"strawberrymemories" 
-},
-  {
-     name:"VELVET RAIN",
-     image:"../images/velvetrainsand.gif",
-     id:"velvetrain" 
-} ];
- let current=0;
- const title=document.getElementById("theme-title");
- const image=document.getElementById("theme-image");
- function updateTheme() {
-     title.textContent=themes[current].name;
-     image.src=themes[current].image;
-} updateTheme();
- document .getElementById("nextBtn") .addEventListener("click",
-()=> {
-     current++;
-     if(current>=themes.length) {
-         current=0;
-    } updateTheme();
-});
- document .getElementById("prevBtn") .addEventListener("click",
-()=> {
-     current--;
-     if(current<0) {
-         current=themes.length-1;
-    } updateTheme();
-});
- image.onclick=()=> {
-     window.location.href= `../html/postcard.html?theme=${themes[current].id}`;
+const themes = [
+    {
+        title: "MIDNIGHT ECHOES",
+        image: "../images/midnightechoessand.gif",
+        id: "midnightechoes"
+    },
+    {
+        title: "SKY LETTERS",
+        image: "../images/skyletterssand.gif",
+        id: "skyletters"
+    },
+    {
+        title: "STRAWBERRY MEMORIES",
+        image: "../images/strawberrymemoriessand.gif",
+        id: "strawberrymemories"
+    },
+    {
+        title: "VELVET RAIN",
+        image: "../images/velvetrainsand.gif",
+        id: "velvetrain"
+    }
+];
+let current = 0;
+const themeTitle = document.getElementById("theme-title");
+const themeImage = document.getElementById("theme-image");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+function updateTheme() {
+    themeTitle.innerText = themes[current].title;
+    themeImage.src = themes[current].image;
 }
+nextBtn.addEventListener("click", function() {
+    current++;
+    if (current >= themes.length) {
+        current = 0;
+    }
+    updateTheme();
+});
+prevBtn.addEventListener("click", function() {
+    current--;
+    if (current < 0) {
+        current = themes.length - 1;
+    }
+    updateTheme();
+});
+themeImage.addEventListener("click", function() {
+    window.location.href =
+        "postcard.html?theme=" + themes[current].id;
+});
+
+updateTheme();

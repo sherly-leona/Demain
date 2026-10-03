@@ -28,5 +28,24 @@ function validateDetails(){
         showPopup("Please set the time!");
         return;
     }
+    const postcardData =
+        JSON.parse(localStorage.getItem("postcardData"));
+    const capsule = {
+        title: title,
+        receiver: remail,
+        date: date,
+        time: time,
+        theme: postcardData.theme,
+        message: postcardData.message,
+        status: "SEALED"
+    };
+    let capsules =
+        JSON.parse(localStorage.getItem("capsules")) || [];
+    capsules.push(capsule);
+    localStorage.setItem(
+        "capsules",
+        JSON.stringify(capsules)
+    );
+    localStorage.removeItem("postcardData");
     window.location.href = "../html/mycapsules.html";
 }
