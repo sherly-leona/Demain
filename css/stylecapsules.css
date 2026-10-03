@@ -1,0 +1,185 @@
+@font-face{
+    font-family:"DemainFont";
+    src:url("../fonts/ARCADECLASSIC.TTF")
+    format("truetype");
+}
+
+body{
+
+    margin:0;
+
+    min-height:100vh;
+
+    background:
+    linear-gradient(
+    #540661,
+    #000000
+    );
+
+    font-family:"DemainFont";
+
+    color:white;
+
+    cursor:
+    url("../images/cursordemain.png")
+    12 20,
+    auto;
+
+}
+
+.container{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    padding:60px;
+
+}
+
+h1{
+
+    font-size:50px;
+
+    letter-spacing:6px;
+
+    margin-bottom:50px;
+
+}
+
+.capsules-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(320px,1fr));
+
+    gap:30px;
+
+    width:100%;
+
+    max-width:1200px;
+
+}
+
+.capsule-card{
+
+    background:
+    rgba(255,255,255,0.05);
+
+    border:
+    2px solid #d785f4;
+
+    padding:25px;
+
+    box-shadow:
+    6px 6px 0px #8d5c96;
+
+    transition:.3s;
+
+}
+
+.capsule-card:hover{
+
+    transform:
+    translateY(-6px);
+
+    background:
+    rgba(255,255,255,0.1);
+
+}
+
+.capsule-card h2{
+
+    font-size:24px;
+
+    margin-bottom:20px;
+
+    color:#f0d4ff;
+
+}
+
+.capsule-card p{
+
+    font-size:18px;
+
+    margin:12px 0;
+
+    letter-spacing:2px;
+
+}
+
+.sealed{
+
+    display:inline-block;
+
+    margin-top:15px;
+
+    padding:8px 16px;
+
+    border:2px solid #d785f4;
+
+    color:#d785f4;
+
+}
+.footer-section{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:25px;
+
+    margin-top:70px;
+
+}
+
+.goodbye-text{
+
+    text-align:center;
+
+    font-size:18px;
+
+    letter-spacing:2px;
+
+    opacity:0.8;
+
+    line-height:1.8;
+
+}
+
+.logout-btn{
+
+    font-family:"DemainFont";
+
+    padding:15px 35px;
+
+    font-size:18px;
+
+    background:none;
+
+    color:white;
+
+    border:2px solid #d785f4;
+
+    box-shadow:5px 5px 0px #8d5c96;
+
+    cursor:url("../images/cursordemain.png") 12 20, auto;
+
+    transition:.3s;
+
+}
+
+.logout-btn:hover{
+
+    background:white;
+
+    color:black;
+
+    transform:translateY(-4px);
+
+}

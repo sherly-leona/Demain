@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTER | DEMAIN</title>
+    <link rel = "stylesheet" href = "../css/styleregister.css">
+</head>
+<script src = "../javascript/register.js"></script>
+<body class = "registerpage">
+    <div class = "background-animation"></div>
+    <div class = "register-box">
+        <h1 class = "welcome">WELCOME</h1>
+        <div class = "input-group">
+            <label>USERNAME</label>
+            <input type = "text" id = "username">
+        </div>
+        <div class = "input-group">
+            <label>EMAIL</label>
+            <input type = "email" id = "email">
+        </div>
+        <div class = "input-group">
+            <label>PASSWORD</label>
+            <div class = "password-box">
+                <input type = "password" id = "password">
+                <span class = "eye" onclick="togglepassword()">👁</span>
+            </div>
+        </div>
+        <button class = "register-btn" onclick="validateRegister()">REGISTER</button>
+    </div>
+    <div id="popup" class="popup hidden">
+    <div class="popup-top">
+        <span>DEMAIN.EXE</span>
+        <button onclick="closePopup()">✕</button>
+    </div>
+    <div class="popup-content">
+        <img src="../images/envelopealert.png" alt="heart">
+        <p id="popup-message">
+            Message Here
+        </p>
+        <button onclick="closePopup()">
+            OK
+        </button>
+    </div>
+</body>
+</html>
