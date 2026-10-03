@@ -1,86 +1,50 @@
-@font-face{
+@font-face {
+ font-family: "DemainFont";
+     src: url("../fonts/ARCADECLASSIC.TTF") format("truetype");
+     }
 
-font-family:"DemainFont";
+ body {
+ margin: 0;
+     height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background: #151414;
+     font-family: "DemainFont";
+     color: white;
+     cursor: url("../images/cursordemain.png") 12 20, auto;
+     }
 
-src:url("../fonts/ARCADECLASSIC.TTF")
-format("truetype");
+ .goodbye-container {
+ display: flex;
+     flex-direction: column;
+     align-items: center;
+     text-align: center;
+     gap: 20px;
+     animation: fadeIn 1.5s ease;
+     }
 
-}
+ h1 {
+ font-size: 42px;
+     letter-spacing: 5px;
+     margin: 0;
+     }
 
-body{
+ p {
+ font-size: 20px;
+     letter-spacing: 2px;
+     opacity: 0.8;
+     }
 
-margin:0;
+ @keyframes fadeIn {
+ from {
+ opacity: 0;
+         transform: translateY(20px);
+             }
 
-height:100vh;
+ to {
+ opacity: 1;
+         transform: translateY(0);
+             }
 
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-background:#151414;
-
-font-family:"DemainFont";
-
-color:white;
-
-cursor:url("../images/cursordemain.png") 12 20, auto;
-
-}
-
-.goodbye-container{
-
-display:flex;
-
-flex-direction:column;
-
-align-items:center;
-
-text-align:center;
-
-gap:20px;
-
-animation:fadeIn 1.5s ease;
-
-}
-
-h1{
-
-font-size:42px;
-
-letter-spacing:5px;
-
-margin:0;
-
-}
-
-p{
-
-font-size:20px;
-
-letter-spacing:2px;
-
-opacity:0.8;
-
-}
-
-@keyframes fadeIn{
-
-from{
-
-opacity:0;
-
-transform:translateY(20px);
-
-}
-
-to{
-
-opacity:1;
-
-transform:translateY(0);
-
-}
-
-}
+ }
