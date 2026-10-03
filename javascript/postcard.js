@@ -25,7 +25,6 @@ if (selectedTheme && themes[selectedTheme]) {
         themes[selectedTheme].art;
 }
 function savePostcard() {
-    alert("SAVE POSTCARD FUNCTION WORKED!");
     const message =
         document.getElementById("message").value;
     if (message.trim() === "") {
