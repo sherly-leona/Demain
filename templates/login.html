@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOGIN | DEMAIN</title>
-    <link rel="stylesheet" href="../css/stylelogin.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/stylelogin.css') }}">
 </head>
-<script src = "../javascript/login.js"></script>
+<script src="{{ url_for('static', filename='javascript/login.js') }}"></script>
 <body class="loginpage">
     <div class = "background-animation"></div>
     <div class = "login-box">
@@ -32,7 +32,7 @@
         <button onclick="closePopup()">✕</button>
     </div>
     <div class="popup-content">
-        <img src="../images/envelopealert.png" alt="heart">
+        <img src="{{ url_for('static', filename='images/envelopeart.gif') }}" alt = "heart">
         <p id="popup-message">
             Message Here
         </p>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEMAIN</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/styleindex.css') }}">
+</head>
+<body>
+    <div class="background-animation"></div>
+    <div class="container">
+        <h1 class="maintitle">
+            DEMAIN
+        </h1>
+        <p class="tagline">
+            Seal it. Forget it. Relive it.
+        </p>
+        <div class="button-group">
+            <form action="{{ url_for('login') }}" method="GET">
+                <button type="submit">
+                    LOGIN
+                </button>
+            </form>
+            <form action="{{ url_for('register') }}" method="GET">
+                <button type="submit">
+                    REGISTER HERE.
+                </button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
