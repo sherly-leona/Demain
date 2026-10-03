@@ -21,70 +21,122 @@ body {
     align-items: center;
     cursor: url("../images/cursor.png"), auto;
 }
-.container {
+.capsule-page {
     width: 90%;
-    max-width: 850px;
+    max-width: 900px;
     text-align: center;
-    padding: 50px 30px;
 }
 #capsule-title {
-    font-size: 45px;
+    font-size: 38px;
     letter-spacing: 4px;
-    margin-bottom: 15px;
+    margin: 0 0 8px;
     text-shadow:
-        4px 4px 0px #000,
+        4px 4px 0 #000,
         0 0 15px #d785f4;
 }
 #capsule-theme {
-    font-size: 18px;
-    letter-spacing: 2px;
     color: #e7b5f5;
-    margin-bottom: 10px;
+    letter-spacing: 2px;
+    margin: 5px;
 }
 #capsule-date {
-    font-size: 15px;
-    letter-spacing: 1px;
     color: #cfa6d8;
-    margin-bottom: 35px;
+    font-size: 14px;
+    margin: 5px;
 }
-.message-box {
+.postcard-container {
+    width: 520px;
+    height: 340px;
+    margin: 45px auto 25px;
+    perspective: 1200px;
+    cursor: pointer;
+}
+.postcard {
     width: 100%;
-    min-height: 300px;
-    padding: 45px;
-    background:
-        linear-gradient(
-            rgba(255, 255, 255, 0.96),
-            rgba(245, 225, 250, 0.96)
-        );
-    color: #241027;
-    border: 4px solid white;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s ease;
+}
+.postcard-container.open .postcard {
+    transform: rotateY(180deg);
+}
+.postcard-front,
+.postcard-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    border: 5px solid white;
     box-shadow:
-        8px 8px 0px #000,
-        0 0 25px rgba(215, 133, 244, 0.5);
+        10px 10px 0 #000;
+}
+.postcard-front {
+    background: #ffffff;
+    overflow: hidden;
+}
+#postcard-art {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    image-rendering: pixelated;
+}
+.postcard-back {
+    background: #fff7ff;
+    color: #241027;
+    transform: rotateY(180deg);
+    padding: 35px;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+}
+.back-content {
+    width: 100%;
+    height: 100%;
+    border: 3px dashed #b85ed5;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.back-content h2 {
+    font-size: 25px;
+    letter-spacing: 4px;
+    margin-bottom: 25px;
 }
 #capsule-message {
     font-family: DemainFont, sans-serif;
-    font-size: 22px;
+    font-size: 18px;
     line-height: 1.8;
-    letter-spacing: 1px;
     white-space: pre-wrap;
-    max-width: 700px;
+}
+.open-text {
+    margin-top: 30px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #e7b5f5;
+    transition: opacity 0.4s ease;
+}
+.postcard-container.open + .open-text {
+    opacity: 0;
 }
 @media (max-width: 600px) {
-    .container {
-        padding: 30px 15px;
-    }
     #capsule-title {
-        font-size: 30px;
+        font-size: 28px;
     }
-    .message-box {
-        padding: 25px;
-        min-height: 250px;
+    .postcard-container {
+        width: 330px;
+        height: 220px;
+    }
+    .postcard-back {
+        padding: 15px;
+    }
+    .back-content {
+        padding: 15px;
     }
     #capsule-message {
-        font-size: 17px;
+        font-size: 14px;
     }
 }
