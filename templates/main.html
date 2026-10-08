@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DEMAIN</title>
-    <link rel = "stylesheet" href = "../css/stylemain.css">
+    <link rel="stylesheet"
+      href="{{ url_for('static', filename='css/stylemain.css') }}">
 </head>
 <body>
     <div class = background-animation></div>
     <div class = "new">
-        <form action = "theme.html">
+        <form action="{{ url_for('theme') }}">
             <button class = "newcapsule">CREATE CAPSULE</button>
         </form>
-        <form action = "mycapsules.html">
+        <form action="{{ url_for('mycapsules') }}">
             <button class = "viewcapsule">VIEW CAPSULES</button>
         </form>
     </div>

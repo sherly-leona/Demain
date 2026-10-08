@@ -6,7 +6,7 @@
           content="width=device-width, initial-scale=1.0">
     <title>CAPSULE | DEMAIN</title>
     <link rel="stylesheet"
-          href="../css/stylecapsule.css">
+          href="{{ url_for('static', filename='css/stylecapsule.css') }}">
 </head>
 <body>
     <div class="capsule-page">
@@ -16,7 +16,11 @@
         <div class="postcard-container" id="postcard">
             <div class="postcard">
                 <div class="postcard-front">
-                    <img id="postcard-art" src="" alt="Postcard artwork">
+                    <img
+                        id="postcard-art"
+                        src=""
+                        alt="Postcard artwork"
+                    >
                 </div>
                 <div class="postcard-back">
                     <div class="back-content">
@@ -30,6 +34,6 @@
             CLICK THE POSTCARD TO OPEN
         </p>
     </div>
-    <script src="../javascript/capsule.js"></script>
+    <script src="{{ url_for('static', filename='javascript/capsule.js') }}"></script>
 </body>
 </html>

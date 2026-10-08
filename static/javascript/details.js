@@ -47,5 +47,5 @@ function validateDetails(){
         JSON.stringify(capsules)
     );
     localStorage.removeItem("postcardData");
-    window.location.href = "../html/mycapsules.html";
+    window.location.href = "/mycapsules";
 }

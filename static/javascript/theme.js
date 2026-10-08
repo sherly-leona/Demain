@@ -1,33 +1,39 @@
 const themes = [
     {
         title: "MIDNIGHT ECHOES",
-        image: "../images/midnightechoessand.gif",
+        image: "static/images/midnightechoessand.gif",
         id: "midnightechoes"
     },
     {
         title: "SKY LETTERS",
-        image: "../images/skyletterssand.gif",
+        image: "static/images/skyletterssand.gif",
         id: "skyletters"
     },
     {
         title: "STRAWBERRY MEMORIES",
-        image: "../images/strawberrymemoriessand.gif",
+        image: "static/images/strawberrymemoriessand.gif",
         id: "strawberrymemories"
     },
     {
         title: "VELVET RAIN",
-        image: "../images/velvetrainsand.gif",
+        image: "static/images/velvetrainsand.gif",
         id: "velvetrain"
     }
 ];
 let current = 0;
-const themeTitle = document.getElementById("theme-title");
-const themeImage = document.getElementById("theme-image");
-const prevBtn = document.getElementById("prevBtn");
-const nextBtn = document.getElementById("nextBtn");
+const themeTitle =
+    document.getElementById("theme-title");
+const themeImage =
+    document.getElementById("theme-image");
+const prevBtn =
+    document.getElementById("prevBtn");
+const nextBtn =
+    document.getElementById("nextBtn");
 function updateTheme() {
-    themeTitle.innerText = themes[current].title;
-    themeImage.src = themes[current].image;
+    themeTitle.innerText =
+        themes[current].title;
+    themeImage.src =
+        themes[current].image;
 }
 nextBtn.addEventListener("click", function() {
     current++;
@@ -45,7 +51,6 @@ prevBtn.addEventListener("click", function() {
 });
 themeImage.addEventListener("click", function() {
     window.location.href =
-        "postcard.html?theme=" + themes[current].id;
+        "/postcard?theme=" + themes[current].id;
 });
-
 updateTheme();

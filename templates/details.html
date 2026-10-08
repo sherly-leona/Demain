@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DETAILS | DEMAIN</title>
-    <link rel = "stylesheet" href = "../css/styledetails.css">
+    <link rel="stylesheet"
+      href="{{ url_for('static', filename='css/styledetails.css') }}">
 </head>
-<script src = "../javascript/details.js"></script>
+<script src="{{ url_for('static', filename='javascript/details.js') }}"></script>
 <body class = "detailspage">
     <div class = "background-animation"></div>
     <div class = "details-box">
@@ -37,7 +38,7 @@
         <button onclick="closePopup()">✕</button>
     </div>
     <div class="popup-content">
-        <img src="../images/envelopealert.png" alt="heart">
+        <img src="static/images/envelopealert.png" alt="heart">
         <p id="popup-message">
             Message Here
         </p>

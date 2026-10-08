@@ -3,19 +3,19 @@ const selectedTheme = params.get("theme");
 const themes = {
     skyletters: {
         title: "SKY LETTERS",
-        art: "../images/skyletterspostcard.png"
+        art: "/static/images/skyletterspostcard.png"
     },
     midnightechoes: {
         title: "MIDNIGHT ECHOES",
-        art: "../images/midnightechoespostcard.png"
+        art: "/static/images/midnightechoespostcard.png"
     },
     velvetrain: {
         title: "VELVET RAIN",
-        art: "../images/velvetrainpostcard.png"
+        art: "/static/images/velvetrainpostcard.png"
     },
     strawberrymemories: {
         title: "STRAWBERRY MEMORIES",
-        art: "../images/strawberrymemoriespostcard.png"
+        art: "/static/images/strawberrymemoriespostcard.png"
     }
 };
 if (selectedTheme && themes[selectedTheme]) {
@@ -39,5 +39,5 @@ function savePostcard() {
         "postcardData",
         JSON.stringify(postcardData)
     );
-    window.location.href = "details.html";
+    window.location.href = "/details";
 }

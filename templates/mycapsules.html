@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MY CAPSULES | DEMAIN</title>
-    <link rel="stylesheet" href="../css/stylecapsules.css">
+    <link rel="stylesheet"
+      href="{{ url_for('static', filename='css/stylecapsules.css') }}">
 </head>
 <body>
     <div class="container">
@@ -16,13 +17,13 @@
                 All your memories have been safely sealed.<br>
                 The future will take care of the rest.
             </p>
-            <form action="goodbye.html">
+            <form action="{{ url_for('goodbye') }}">
                 <button class="logout-btn">
                     LOG OUT
                 </button>
             </form>
         </div>
     </div>
-    <script src = "../javascript/mycapsules.js"></script>
+    <script src="{{ url_for('static', filename='javascript/mycapsules.js') }}"></script>
 </body>
 </html>

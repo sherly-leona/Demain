@@ -6,7 +6,8 @@
         <title>
             THEMES | DEMAIN
         </title>
-        <link rel="stylesheet" href="../css/styletheme.css">
+        <link rel="stylesheet"
+      href="{{ url_for('static', filename='css/styletheme.css') }}">
     </head>
     <body>
         <div class="container">
@@ -27,7 +28,6 @@
                 </button>
             </div>
         </div>
-        <script src="../javascript/theme.js">
-        </script>
+        <script src="{{ url_for('static', filename='javascript/theme.js') }}"></script>
     </body>
 </html>
